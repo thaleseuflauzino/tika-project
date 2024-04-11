@@ -17,7 +17,7 @@ def extract_text():
     try:
         parsed = parser.from_buffer(file.read())
         text = parsed['content']
-        return jsonify({'text': text}), 200
+        return jsonify({'text': text.strip()}), 200
     except Exception as e:
         print('Erro ao extrair texto:', e)
         return jsonify({'error': 'Erro ao extrair texto do arquivo'}), 500
