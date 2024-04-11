@@ -7,7 +7,7 @@
 </head>
 <body>
     <input type="file" id="fileInput">
-    <button onclick="extractText()">Extract Text</button>
+    <button onclick="extractText()">Extrair Texto</button>
     <div id="output"></div>
 
     <script>
@@ -18,7 +18,7 @@
             const formData = new FormData();
             formData.append('file', file);
 
-            fetch('/extract_text/', {
+            fetch('/extract_text', {
                 method: 'POST',
                 body: formData
             })
